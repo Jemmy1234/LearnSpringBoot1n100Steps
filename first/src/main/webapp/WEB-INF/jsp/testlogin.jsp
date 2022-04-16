@@ -5,7 +5,9 @@
 </head>
 
 <body>
-  My First jsp application
+  My First jsp application!
+  <hr>
+  ${name} likes to do ${action}!!
 </body>
 
 </html>
