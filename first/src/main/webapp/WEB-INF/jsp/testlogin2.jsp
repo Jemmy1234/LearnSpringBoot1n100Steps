@@ -5,8 +5,10 @@
 </head>
 
 <body>
-  <form>
-    Name : <input type="text" name="input" />
+  <form method="post">
+    My Name :
+    <input type="text" name="keyinput" />
+    <input type="password" name="pass" />
     <input type="submit" />
   </form>
 </body>
