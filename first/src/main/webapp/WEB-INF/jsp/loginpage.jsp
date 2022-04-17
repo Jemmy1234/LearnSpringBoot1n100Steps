@@ -5,6 +5,7 @@
 </head>
 
 <body>
+  <font color="red">${errorMessage}</font>
   <form method="post">
     My Name :
     <input type="text" name="keyinput" />

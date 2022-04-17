@@ -1,5 +1,8 @@
 package com.springweb.fly.first.controller;
 
+import com.springweb.fly.first.service.LoginService;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,6 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class LoginController {
+
+  @Autowired
+  LoginService loginService;
 
   @RequestMapping("/login1")
   @ResponseBody
@@ -39,8 +45,22 @@ public class LoginController {
     return "loginpage";
   }
 
+  // @RequestMapping(value = "/login4", method = RequestMethod.POST)
+  // public String welcomepage(ModelMap model, @RequestParam String keyinput,
+  // @RequestParam String pass) {
+  // model.put("name", keyinput);
+  // model.put("yourpass", pass);
+  // return "welcomepage";
+  // }
+
   @RequestMapping(value = "/login4", method = RequestMethod.POST)
-  public String welcomepage(ModelMap model, @RequestParam String keyinput, @RequestParam String pass) {
+  public String welcomePageWithService(ModelMap model, @RequestParam String keyinput, @RequestParam String pass) {
+
+    if (!loginService.validateUser(keyinput, pass)) {
+      model.put("errorMessage", "Your password is wrong");
+      return "loginpage";
+    }
+
     model.put("name", keyinput);
     model.put("yourpass", pass);
     return "welcomepage";
