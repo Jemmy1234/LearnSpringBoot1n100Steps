@@ -5,8 +5,9 @@
 </head>
 
 <body>
-  Welcome!!! ${name}
-  Please <a href="/todo-list">click me</a> to see todo list
+  Here are your todos:
+  <br>
+  ${todowhole}
 </body>
 
 </html>

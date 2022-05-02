@@ -37,12 +37,7 @@ public class LoginController {
   @RequestMapping("/login3")
   public String loginJspWithoutInput(ModelMap model) {
 
-    return "testlogin2";
-  }
-
-  @RequestMapping(value = "/login4", method = RequestMethod.GET)
-  public String loginPage(ModelMap model) {
-    return "loginpage";
+    return "welcomepage";
   }
 
   // @RequestMapping(value = "/login4", method = RequestMethod.POST)
