@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
+@SessionAttributes("name")
 public class LoginController {
 
   @Autowired
@@ -34,10 +36,9 @@ public class LoginController {
     return "testlogin";
   }
 
-  @RequestMapping("/login3")
+  @RequestMapping(value = "/login4", method = RequestMethod.GET)
   public String loginJspWithoutInput(ModelMap model) {
-
-    return "welcomepage";
+    return "loginpage";
   }
 
   // @RequestMapping(value = "/login4", method = RequestMethod.POST)

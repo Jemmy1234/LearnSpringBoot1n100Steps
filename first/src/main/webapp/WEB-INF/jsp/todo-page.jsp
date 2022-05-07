@@ -8,6 +8,8 @@
   Here are your todos:
   <br>
   ${todowhole}
+  <br>
+  Your name is : ${name}
 </body>
 
 </html>
