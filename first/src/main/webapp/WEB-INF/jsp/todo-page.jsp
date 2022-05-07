@@ -5,11 +5,12 @@
 </head>
 
 <body>
-  Here are your todos:
+  Here are ${name} todo-lists:
   <br>
   ${todowhole}
   <br>
-  Your name is : ${name}
+  <br>
+  <a href="todo">Add todo</a>
 </body>
 
 </html>
